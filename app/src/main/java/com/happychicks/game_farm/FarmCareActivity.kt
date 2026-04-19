@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.happychicks.R
+import com.happychicks.core.AudioManager
 import com.happychicks.core.BaseTvActivity
 import com.happychicks.core.FocusUtils
 import java.util.concurrent.TimeUnit
@@ -38,10 +39,12 @@ class FarmCareActivity : BaseTvActivity() {
 
         feedBtn.setOnClickListener {
             repo.setHunger(100); refresh(); animatePulse()
+            audio.playSfx(AudioManager.SFX_FEED)
             tts.speak(getString(R.string.action_feed))
         }
         cleanBtn.setOnClickListener {
             repo.setCleanliness(100); refresh(); animatePulse()
+            audio.playSfx(AudioManager.SFX_CLEAN)
             tts.speak(getString(R.string.action_clean))
         }
         FocusUtils.requestInitialFocus(feedBtn)

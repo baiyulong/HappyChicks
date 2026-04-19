@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import com.happychicks.R
+import com.happychicks.core.AudioManager
 import com.happychicks.core.BaseTvActivity
 import com.happychicks.core.FocusUtils
 
@@ -60,9 +61,11 @@ class CountingActivity : BaseTvActivity() {
     private fun onPick(n: Int) {
         if (n == correct) {
             tts.speak("$correct, " + getString(R.string.correct))
+            audio.playSfx(AudioManager.SFX_CORRECT)
             repo.addCoins(2)
             answers.postDelayed({ nextQuestion() }, 1200)
         } else {
+            audio.playSfx(AudioManager.SFX_WRONG)
             tts.speak(getString(R.string.try_again))
         }
     }

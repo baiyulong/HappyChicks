@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.happychicks.R
+import com.happychicks.core.AudioManager
 import com.happychicks.core.BaseTvActivity
 import com.happychicks.core.FocusUtils
 
@@ -47,6 +48,7 @@ class EggLayingActivity : BaseTvActivity() {
         stage.setImageResource(R.drawable.ic_egg)
         hatching = true
         layBtn.isEnabled = false
+        audio.playSfx(AudioManager.SFX_LAY_EGG)
         tts.speak(getString(R.string.action_lay_egg))
         startHatch()
         achievements.evaluate()
@@ -66,6 +68,7 @@ class EggLayingActivity : BaseTvActivity() {
                 eggs = maxOf(0, eggs - 1)
                 statusText.text = getString(R.string.chick_hatched)
                 stage.setImageResource(R.drawable.ic_chick)
+                audio.playSfx(AudioManager.SFX_HATCH)
                 tts.speak(getString(R.string.chick_hatched))
                 // small coin reward
                 repo.addCoins(COINS_PER_HATCH)

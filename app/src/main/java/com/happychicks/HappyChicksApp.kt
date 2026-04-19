@@ -16,6 +16,7 @@ class HappyChicksApp : Application() {
         super.onCreate()
         instance = this
         LocaleHelper.applySavedLocale(this, repository.getLanguage())
+        audio.init()
     }
 
     companion object {

@@ -1,3 +1,4 @@
+# ---- Android / Gradle ----
 *.iml
 .gradle/
 /local.properties
@@ -9,3 +10,60 @@
 .externalNativeBuild/
 .cxx/
 local.properties
+
+# Keystore & secrets (NEVER commit)
+*.keystore
+*.jks
+*.p12
+signing.properties
+keystore.properties
+google-services.json
+.env
+
+# Release APK / AAB (distribute separately)
+*.apk
+*.aab
+*.ap_
+
+# NDK
+obj/
+libs/*.so
+
+# Kotlin / Java
+*.class
+*.jar
+out/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE
+*.swp
+*~
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+nbproject/
+.idea/
+*.ipr
+*.iws
+
+# Test output
+/test-results/
+/jacocoTestReport/
+
+# Generated assets (committed intentionally – override below if needed)
+# app/src/main/res/raw/*.wav is committed as part of project

@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.happychicks.R
+import com.happychicks.core.AudioManager
 import com.happychicks.core.BaseTvActivity
 import com.happychicks.core.FocusUtils
 
@@ -67,12 +68,13 @@ class ShapeActivity : BaseTvActivity() {
     }
 
     private fun onPick(idx: Int, picked: ShapeActivity.Shape) {
-        val targetName = promptView.text.toString()
         if (idx == targetIndex) {
             tts.speak(getString(R.string.correct))
+            audio.playSfx(AudioManager.SFX_CORRECT)
             repo.addCoins(2)
             promptView.postDelayed({ nextQuestion() }, 1000)
         } else {
+            audio.playSfx(AudioManager.SFX_WRONG)
             tts.speak(getString(R.string.try_again))
         }
     }

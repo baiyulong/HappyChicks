@@ -17,6 +17,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.happychicks.R
+import com.happychicks.core.AudioManager
 import com.happychicks.core.BaseTvActivity
 import com.happychicks.core.FocusUtils
 
@@ -138,9 +139,10 @@ class PuzzleActivity : BaseTvActivity() {
         if ((r1 == r2 && kotlin.math.abs(c1 - c2) == 1) ||
             (c1 == c2 && kotlin.math.abs(r1 - r2) == 1)) {
             val tmp = tileOrder[empty]; tileOrder[empty] = tileOrder[pos]; tileOrder[pos] = tmp
-            // Swap views (re-render by removing all and rebuilding for simplicity)
+            audio.playSfx(AudioManager.SFX_PUZZLE_SLIDE)
             rebuildGrid()
             if (isSolved()) {
+                audio.playSfx(AudioManager.SFX_PUZZLE_WIN)
                 tts.speak(getString(R.string.puzzle_complete))
                 repo.addCoins(COINS_PER_PUZZLE)
                 android.widget.Toast.makeText(this, R.string.puzzle_complete, android.widget.Toast.LENGTH_LONG)

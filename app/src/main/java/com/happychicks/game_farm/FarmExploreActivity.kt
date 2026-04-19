@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.happychicks.R
+import com.happychicks.core.AudioManager
 import com.happychicks.core.BaseTvActivity
 import com.happychicks.core.FocusUtils
 
@@ -62,6 +63,7 @@ class FarmExploreActivity : BaseTvActivity() {
         view.animate().scaleX(1.2f).scaleY(1.2f).setDuration(200)
             .withEndAction { view.animate().scaleX(1f).scaleY(1f).setDuration(200).start() }
             .start()
+        audio.playSfx(AudioManager.SFX_DISCOVER)
         repo.addCoins(3)
         tts.speak(getString(R.string.correct))
         updateProgress()

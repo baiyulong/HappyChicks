@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.happychicks.R
+import com.happychicks.core.AudioManager
 import com.happychicks.core.BaseTvActivity
 import com.happychicks.core.FocusUtils
 
@@ -86,9 +87,11 @@ class WardrobeActivity : BaseTvActivity() {
         }
         if (repo.spendCoins(skin.cost)) {
             repo.unlockSkin(skin.id)
+            audio.playSfx(AudioManager.SFX_COIN)
             Toast.makeText(this, R.string.unlock_success, Toast.LENGTH_SHORT).show()
             tts.speak(getString(R.string.unlock_success))
         } else {
+            audio.playSfx(AudioManager.SFX_WRONG)
             Toast.makeText(this, R.string.not_enough_coins, Toast.LENGTH_SHORT).show()
             tts.speak(getString(R.string.not_enough_coins))
         }

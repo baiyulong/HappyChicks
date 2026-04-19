@@ -35,6 +35,16 @@ abstract class BaseTvActivity : AppCompatActivity() {
         )
     }
 
+    override fun onResume() {
+        super.onResume()
+        audio.startBgMusic()
+    }
+
+    override fun onPause() {
+        audio.stopBgMusic()
+        super.onPause()
+    }
+
     /** Apply overscan padding; call after setContentView. */
     protected fun setupOverscan(root: View) {
         OverscanHelper.applyToRoot(this, root)

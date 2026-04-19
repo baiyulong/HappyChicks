@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.happychicks.R
+import com.happychicks.core.AudioManager
 import com.happychicks.core.BaseTvActivity
 import com.happychicks.core.FocusUtils
 
@@ -38,6 +39,7 @@ class ChallengeActivity : BaseTvActivity() {
             repo.addEggs(1)
             scoreText.text = getString(R.string.egg_count, score)
             stage.setImageResource(R.drawable.ic_egg)
+            audio.playSfx(AudioManager.SFX_LAY_EGG)
             stage.postDelayed({ if (running) stage.setImageResource(R.drawable.ic_hen) }, 250)
             achievements.evaluate()
         }

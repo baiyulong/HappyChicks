@@ -4,7 +4,9 @@ import android.content.Context
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.Toast
+import com.happychicks.HappyChicksApp
 import com.happychicks.R
+import com.happychicks.core.AudioManager
 import com.happychicks.core.TtsManager
 
 /**
@@ -16,6 +18,7 @@ class AchievementManager(
     private val repo: GameRepository,
     private val tts: TtsManager
 ) {
+    private val audio: AudioManager get() = (context.applicationContext as HappyChicksApp).audio
 
     /** Evaluate all achievements; trigger unlock for any newly satisfied. */
     fun evaluate() {
@@ -49,8 +52,8 @@ class AchievementManager(
                 setGravity(Gravity.CENTER, 0, 0)
                 show()
             }
+            audio.playSfx(AudioManager.SFX_ACHIEVEMENT)
             tts.speak("$title, $name")
-            // Reward coins
             repo.addCoins(COINS_PER_ACHIEVEMENT)
         }
     }
