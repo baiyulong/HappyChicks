@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp" android:height="140dp"
+    android:viewportWidth="140" android:viewportHeight="140">
+    <path android:pathData="M70,85 m-35,0 a35,35 0 1,0 70,0 a35,35 0 1,0 -70,0" android:fillColor="@color/chick_body" />
+    <path android:pathData="M70,45 m-20,0 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0" android:fillColor="@color/chick_body" />
+    <path android:pathData="M85,45 l12,-3 l-12,10 z" android:fillColor="@color/chick_beak" />
+    <path android:pathData="M65,42 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" android:fillColor="#212121" />
+    <path android:pathData="M75,42 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" android:fillColor="#212121" />
+</vector>

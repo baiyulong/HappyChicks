@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="@color/bg_main"
+    android:keepScreenOn="true">
+
+    <TextView style="@style/Text.Headline"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/menu_settings" android:layout_marginBottom="24dp" />
+
+    <TextView style="@style/Text.Title"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/settings_music_volume" />
+    <SeekBar android:id="@+id/sb_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:focusable="true"
+        android:layout_marginBottom="16dp" />
+
+    <TextView style="@style/Text.Title"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/settings_sfx_volume" />
+    <SeekBar android:id="@+id/sb_sfx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:focusable="true"
+        android:layout_marginBottom="24dp" />
+
+    <TextView style="@style/Text.Title"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/settings_language" />
+    <LinearLayout
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+        <Button android:id="@+id/btn_lang_zh" style="@style/TvButton"
+            android:layout_marginEnd="16dp"
+            android:text="@string/settings_language_zh" />
+        <Button android:id="@+id/btn_lang_en" style="@style/TvButton"
+            android:text="@string/settings_language_en" />
+    </LinearLayout>
+
+    <Button android:id="@+id/btn_reset" style="@style/TvButton"
+        android:layout_width="wrap_content"
+        android:text="@string/settings_reset" />
+</LinearLayout>

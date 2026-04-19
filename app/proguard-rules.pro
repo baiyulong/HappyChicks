@@ -1,0 +1,4 @@
+-keep class androidx.leanback.** { *; }
+-keep class com.happychicks.** { *; }
+-dontwarn kotlin.**
+-keepattributes *Annotation*

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/bg_main"
+    android:keepScreenOn="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Text.Title"
+        android:text="@string/choose_puzzle_size"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:id="@+id/size_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button android:id="@+id/btn_2x2" style="@style/TvButton"
+            android:layout_marginEnd="16dp"
+            android:text="@string/puzzle_2x2" />
+        <Button android:id="@+id/btn_3x3" style="@style/TvButton"
+            android:text="@string/puzzle_3x3" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

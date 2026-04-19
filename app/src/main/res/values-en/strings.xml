@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Happy Chicks</string>
+
+    <string name="menu_chicken">Happy Chicks</string>
+    <string name="menu_funland">Fun Land</string>
+    <string name="menu_farm">My Farm</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="game_free_mode">Free Play</string>
+    <string name="game_challenge_mode">Time Challenge</string>
+    <string name="action_lay_egg">Lay Egg (OK)</string>
+    <string name="hatching_in">Hatching… %1$d</string>
+    <string name="chick_hatched">A chick hatched!</string>
+    <string name="egg_count">Eggs: %1$d</string>
+    <string name="chick_count">Chicks: %1$d</string>
+    <string name="challenge_time_left">Time left: %1$d s</string>
+    <string name="challenge_result_title">Challenge Over!</string>
+    <string name="challenge_result_score">Score: %1$d eggs</string>
+    <string name="challenge_best_score">Best: %1$d</string>
+    <string name="challenge_new_best">New Record!</string>
+
+    <string name="funland_coloring">Chick Coloring</string>
+    <string name="funland_puzzle">Farm Puzzle</string>
+    <string name="funland_shape">Shapes</string>
+    <string name="funland_counting">Counting House</string>
+    <string name="save_image">Save</string>
+    <string name="image_saved">Saved</string>
+    <string name="image_save_failed">Save failed, check storage permission</string>
+    <string name="choose_puzzle_size">Pick Difficulty</string>
+    <string name="puzzle_2x2">2×2 (Easy)</string>
+    <string name="puzzle_3x3">3×3 (Medium)</string>
+    <string name="puzzle_complete">Puzzle Complete!</string>
+    <string name="shape_prompt">Pick: %1$s</string>
+    <string name="counting_prompt">How many?</string>
+    <string name="correct">Correct!</string>
+    <string name="try_again">Try again</string>
+
+    <string name="farm_care">Farm Care</string>
+    <string name="farm_explore">Farm Explore</string>
+    <string name="farm_wardrobe">Wardrobe</string>
+    <string name="hunger_level">Hunger: %1$d</string>
+    <string name="cleanliness_level">Cleanliness: %1$d</string>
+    <string name="action_feed">Feed</string>
+    <string name="action_clean">Clean</string>
+    <string name="discovered_count">Found: %1$d / %2$d</string>
+
+    <string name="character_select">Select Character</string>
+    <string name="character_a">Orange</string>
+    <string name="character_b">Blue</string>
+    <string name="coins">Coins: %1$d</string>
+    <string name="unlock_cost">Unlock for %1$d coins</string>
+    <string name="unlocked">Unlocked</string>
+    <string name="not_enough_coins">Not enough coins</string>
+    <string name="unlock_success">Unlocked!</string>
+
+    <string name="settings_music_volume">Music Volume</string>
+    <string name="settings_sfx_volume">SFX Volume</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_zh">中文</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_reset">Reset Game Data</string>
+    <string name="settings_reset_confirm">Erase all progress? This cannot be undone.</string>
+    <string name="settings_reset_done">Reset complete</string>
+    <string name="btn_confirm">OK</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_back">Back</string>
+
+    <string name="achievement_unlocked">Achievement Unlocked</string>
+    <string name="achievement_first_hatch_name">First Hatch</string>
+    <string name="achievement_first_hatch_desc">Hatch your first chick</string>
+    <string name="achievement_ten_chicks_name">Perfect Ten</string>
+    <string name="achievement_ten_chicks_desc">Hatch 10 chicks total</string>
+    <string name="achievement_fifty_eggs_name">Egg Harvest</string>
+    <string name="achievement_fifty_eggs_desc">Collect 50 eggs total</string>
+
+    <string name="shape_circle">Circle</string>
+    <string name="shape_square">Square</string>
+    <string name="shape_triangle">Triangle</string>
+    <string name="color_red">Red</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_green">Green</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_purple">Purple</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_white">White</string>
+</resources>

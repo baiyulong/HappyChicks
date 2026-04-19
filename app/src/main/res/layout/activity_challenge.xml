@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/bg_main"
+    android:keepScreenOn="true">
+
+    <TextView
+        android:id="@+id/timer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_display"
+        android:textStyle="bold"
+        android:textColor="@color/primary_dark"
+        android:text="@string/challenge_time_left"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Text.Title"
+        android:text="@string/egg_count"
+        android:layout_marginBottom="24dp" />
+
+    <ImageView
+        android:id="@+id/stage"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/ic_hen"
+        android:contentDescription="@null"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btn_lay"
+        style="@style/TvButton"
+        android:text="@string/action_lay_egg" />
+</LinearLayout>

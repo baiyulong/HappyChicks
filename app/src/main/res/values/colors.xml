@@ -1,0 +1,29 @@
+<resources>
+    <color name="primary">#FFB74D</color>
+    <color name="primary_dark">#F57C00</color>
+    <color name="accent">#4FC3F7</color>
+    <color name="focus_stroke">#FFFFFFFF</color>
+    <color name="focus_glow">#FFFFE082</color>
+
+    <color name="bg_main">#FFF8E1</color>
+    <color name="bg_card">#FFFFFFFF</color>
+    <color name="bg_card_focused">#FFFFF176</color>
+
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#616161</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <color name="chick_body">#FFF176</color>
+    <color name="chick_beak">#FFA726</color>
+    <color name="egg_shell">#FFF8E1</color>
+    <color name="egg_shadow">#E0D5A0</color>
+
+    <color name="shape_red">#E53935</color>
+    <color name="shape_yellow">#FDD835</color>
+    <color name="shape_blue">#1E88E5</color>
+    <color name="shape_green">#43A047</color>
+    <color name="shape_orange">#FB8C00</color>
+    <color name="shape_purple">#8E24AA</color>
+    <color name="shape_pink">#EC407A</color>
+    <color name="shape_white">#FFFFFF</color>
+</resources>

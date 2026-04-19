@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">快乐小鸡</string>
+
+    <!-- Main Menu Categories -->
+    <string name="menu_chicken">快乐小鸡</string>
+    <string name="menu_funland">趣味乐园</string>
+    <string name="menu_farm">我的农场</string>
+    <string name="menu_settings">设置</string>
+
+    <!-- Game Core -->
+    <string name="game_free_mode">自由模式</string>
+    <string name="game_challenge_mode">限时挑战</string>
+    <string name="action_lay_egg">下蛋（确认键）</string>
+    <string name="hatching_in">孵化中… %1$d</string>
+    <string name="chick_hatched">小鸡孵化啦！</string>
+    <string name="egg_count">鸡蛋：%1$d</string>
+    <string name="chick_count">小鸡：%1$d</string>
+    <string name="challenge_time_left">剩余时间：%1$d 秒</string>
+    <string name="challenge_result_title">挑战结束！</string>
+    <string name="challenge_result_score">本次成绩：%1$d 个鸡蛋</string>
+    <string name="challenge_best_score">最佳成绩：%1$d</string>
+    <string name="challenge_new_best">新纪录！</string>
+
+    <!-- Funland -->
+    <string name="funland_coloring">小鸡填色</string>
+    <string name="funland_puzzle">农场拼图</string>
+    <string name="funland_shape">形状认知</string>
+    <string name="funland_counting">数数小屋</string>
+    <string name="save_image">保存作品</string>
+    <string name="image_saved">作品已保存</string>
+    <string name="image_save_failed">保存失败，请检查存储权限</string>
+    <string name="choose_puzzle_size">选择拼图难度</string>
+    <string name="puzzle_2x2">2×2（简单）</string>
+    <string name="puzzle_3x3">3×3（中等）</string>
+    <string name="puzzle_complete">拼图完成！</string>
+    <string name="shape_prompt">请选择：%1$s</string>
+    <string name="counting_prompt">数一数有几个？</string>
+    <string name="correct">答对啦！</string>
+    <string name="try_again">再试一次</string>
+
+    <!-- Farm -->
+    <string name="farm_care">农场照顾</string>
+    <string name="farm_explore">农场探索</string>
+    <string name="farm_wardrobe">装扮小屋</string>
+    <string name="hunger_level">饥饿度：%1$d</string>
+    <string name="cleanliness_level">清洁度：%1$d</string>
+    <string name="action_feed">喂食</string>
+    <string name="action_clean">清理</string>
+    <string name="discovered_count">已发现：%1$d / %2$d</string>
+
+    <!-- Profile -->
+    <string name="character_select">选择角色</string>
+    <string name="character_a">小橙</string>
+    <string name="character_b">小蓝</string>
+    <string name="coins">金币：%1$d</string>
+    <string name="unlock_cost">%1$d 金币解锁</string>
+    <string name="unlocked">已解锁</string>
+    <string name="not_enough_coins">金币不足</string>
+    <string name="unlock_success">解锁成功！</string>
+
+    <!-- Settings -->
+    <string name="settings_music_volume">音乐音量</string>
+    <string name="settings_sfx_volume">音效音量</string>
+    <string name="settings_language">语言</string>
+    <string name="settings_language_zh">中文</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_reset">重置游戏数据</string>
+    <string name="settings_reset_confirm">确定要清除所有游戏进度？此操作不可恢复。</string>
+    <string name="settings_reset_done">已重置</string>
+    <string name="btn_confirm">确定</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_back">返回</string>
+
+    <!-- Achievements -->
+    <string name="achievement_unlocked">成就解锁</string>
+    <string name="achievement_first_hatch_name">初为鸡妈</string>
+    <string name="achievement_first_hatch_desc">孵化第一只小鸡</string>
+    <string name="achievement_ten_chicks_name">十全十美</string>
+    <string name="achievement_ten_chicks_desc">累计孵化 10 只小鸡</string>
+    <string name="achievement_fifty_eggs_name">蛋蛋丰收</string>
+    <string name="achievement_fifty_eggs_desc">累计收集 50 个鸡蛋</string>
+
+    <!-- Shapes & Colors (for TTS) -->
+    <string name="shape_circle">圆形</string>
+    <string name="shape_square">方形</string>
+    <string name="shape_triangle">三角形</string>
+    <string name="color_red">红色</string>
+    <string name="color_yellow">黄色</string>
+    <string name="color_blue">蓝色</string>
+    <string name="color_green">绿色</string>
+    <string name="color_orange">橙色</string>
+    <string name="color_purple">紫色</string>
+    <string name="color_pink">粉色</string>
+    <string name="color_white">白色</string>
+</resources>

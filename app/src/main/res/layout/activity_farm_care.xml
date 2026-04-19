@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/bg_main"
+    android:keepScreenOn="true">
+
+    <ImageView
+        android:id="@+id/chick_img"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:src="@drawable/ic_chick"
+        android:contentDescription="@null"
+        android:layout_marginBottom="16dp" />
+
+    <TextView android:id="@+id/tv_hunger" style="@style/Text.Title"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/hunger_level" android:layout_marginBottom="8dp" />
+
+    <TextView android:id="@+id/tv_clean" style="@style/Text.Title"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/cleanliness_level" android:layout_marginBottom="24dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btn_feed" style="@style/TvButton"
+            android:layout_marginEnd="24dp" android:text="@string/action_feed" />
+        <Button android:id="@+id/btn_clean" style="@style/TvButton"
+            android:text="@string/action_clean" />
+    </LinearLayout>
+</LinearLayout>
