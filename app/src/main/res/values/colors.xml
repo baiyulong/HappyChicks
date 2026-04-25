@@ -15,8 +15,8 @@
 
     <color name="chick_body">#FFF176</color>
     <color name="chick_beak">#FFA726</color>
-    <color name="egg_shell">#FFF8E1</color>
-    <color name="egg_shadow">#E0D5A0</color>
+    <color name="egg_shell">#FFFFFF</color>
+    <color name="egg_shadow">#B8A060</color>
 
     <color name="shape_red">#E53935</color>
     <color name="shape_yellow">#FDD835</color>
