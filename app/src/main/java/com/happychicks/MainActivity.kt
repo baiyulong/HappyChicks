@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                     .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                     .build()
             ).build()
-        laySoundId = soundPool.load(this, R.raw.sfx_lay_egg, 1)
+        laySoundId = soundPool.load(this, R.raw.sfx_fart, 1)
 
         // Position chick after the layout is measured
         root.post { placeChick(animate = false) }
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         soundPool.play(laySoundId, 1f, 1f, 1, 0, 1f)
 
         showEggAt(oldX, oldY)
-        placeChick(animate = true)
+        placeChickBesideEgg(eggX = oldX, eggY = oldY)
     }
 
     private fun updateCounter() {
@@ -83,7 +83,30 @@ class MainActivity : AppCompatActivity() {
             .start()
     }
 
-    /** Move the chick to a new random position within the screen bounds. */
+    /** Move the chick to sit just beside the egg it just laid. */
+    private fun placeChickBesideEgg(eggX: Float, eggY: Float) {
+        val eggW = dpToPx(70f)   // ic_egg width in dp
+        val gap  = dpToPx(8f)
+
+        // Prefer moving to the right; if that clips out of screen, go left
+        val rightX = eggX + eggW + gap
+        val leftX  = eggX - chickView.width - gap
+
+        val newX = when {
+            rightX + chickView.width <= root.width -> rightX
+            leftX >= 0 -> leftX
+            else -> (root.width - chickView.width).coerceAtLeast(0).toFloat()
+        }
+        val newY = eggY.coerceIn(0f, (root.height - chickView.height).toFloat().coerceAtLeast(0f))
+
+        chickView.animate()
+            .x(newX).y(newY)
+            .setDuration(280)
+            .setInterpolator(OvershootInterpolator(1.8f))
+            .start()
+    }
+
+    /** Move the chick to a random position (used on first placement). */
     private fun placeChick(animate: Boolean) {
         val maxX = (root.width - chickView.width).coerceAtLeast(0)
         val maxY = (root.height - chickView.height).coerceAtLeast(0)
@@ -101,6 +124,8 @@ class MainActivity : AppCompatActivity() {
             chickView.y = newY
         }
     }
+
+    private fun dpToPx(dp: Float) = dp * resources.displayMetrics.density
 
     private fun prefs() = getSharedPreferences("game", Context.MODE_PRIVATE)
 

@@ -1,6 +1,12 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="120dp" android:height="120dp"
-    android:viewportWidth="120" android:viewportHeight="120">
-    <path android:pathData="M60,60 m-40,0 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0" android:fillColor="@color/egg_shell" />
-    <path android:pathData="M60,60 m-40,0 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0" android:strokeColor="@color/egg_shadow" android:strokeWidth="2" android:fillColor="#00000000" />
+    android:width="70dp" android:height="90dp"
+    android:viewportWidth="70" android:viewportHeight="90">
+    <!-- Egg shape: rounded bottom, narrower pointed top -->
+    <path
+        android:pathData="M35,4 C18,4 6,26 6,52 C6,72 18,86 35,86 C52,86 64,72 64,52 C64,26 52,4 35,4 Z"
+        android:fillColor="@color/egg_shell" />
+    <!-- Subtle highlight -->
+    <path
+        android:pathData="M24,16 C20,22 18,30 19,36 C21,30 24,22 28,18 Z"
+        android:fillColor="#33FFFFFF" />
 </vector>

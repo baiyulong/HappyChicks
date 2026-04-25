@@ -21,8 +21,8 @@
     <!-- Egg that pops up briefly at the chick's old position -->
     <ImageView
         android:id="@+id/egg"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="70dp"
+        android:layout_height="90dp"
         android:src="@drawable/ic_egg"
         android:visibility="gone"
         android:contentDescription="@null" />
