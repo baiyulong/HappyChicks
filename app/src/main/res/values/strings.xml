@@ -13,6 +13,7 @@
     <string name="action_lay_egg">下蛋（确认键）</string>
     <string name="hatching_in">孵化中… %1$d</string>
     <string name="chick_hatched">小鸡孵化啦！</string>
+    <string name="egg_counter_label">🥚 %1$d</string>
     <string name="egg_count">鸡蛋：%1$d</string>
     <string name="chick_count">小鸡：%1$d</string>
     <string name="challenge_time_left">剩余时间：%1$d 秒</string>

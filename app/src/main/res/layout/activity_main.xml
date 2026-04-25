@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/bg_main"
     android:keepScreenOn="true">
 
+    <!-- Egg counter — fixed in top-right corner -->
     <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
+        android:id="@+id/egg_counter"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textSize="@dimen/text_display"
+        android:layout_gravity="top|end"
+        android:layout_margin="24dp"
+        android:textSize="32sp"
         android:textStyle="bold"
         android:textColor="@color/primary_dark"
-        android:layout_marginBottom="24dp" />
+        android:text="🥚 0" />
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+    <!-- Egg that pops up briefly at the chick's old position -->
+    <ImageView
+        android:id="@+id/egg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_egg"
+        android:visibility="gone"
+        android:contentDescription="@null" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+    <!-- The chick — positioned dynamically; tap to lay an egg -->
+    <ImageView
+        android:id="@+id/chick"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/ic_chick"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@null" />
 
-            <include layout="@layout/row_menu_chicken" />
-            <include layout="@layout/row_menu_funland" />
-            <include layout="@layout/row_menu_farm" />
-            <include layout="@layout/row_menu_settings" />
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-</LinearLayout>
+</FrameLayout>
